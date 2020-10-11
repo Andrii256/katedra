@@ -1,0 +1,130 @@
+* {
+   box-sizing: border-box;
+}
+
+*::selection {
+   color: black;
+   background: #FEED01;
+}
+
+body {
+   --color-yellow: #FEED01;
+   --color-green: #0c5625;
+   --color-brown: #846A20;
+   --color-light: #fff;
+
+   font-family: 'Open Sans', sans-serif;
+   background-color: var(--color-brown);
+}
+
+
+.check-order {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 50px;
+   padding: 10px 15px;
+   background-color: #b19034;
+   box-shadow: 0 0px 5px #b19034;
+   user-select: none;
+}
+
+.check-order__text {
+   flex-grow: 1;
+}
+
+.check-order__input {
+   display: none;
+}
+
+.check-order__input:checked + .check-order__toggler {
+   background-color: var(--color-green);
+   color: var(--color-light);
+}
+
+.check-order__toggler {
+   cursor: pointer;
+   padding: 10px;
+   margin: 0 5px;
+   border-radius: 5px;
+   transition-duration: 0.2s;
+}
+
+.check-order__toggler--active {
+   /* background-color: var(--color-green);
+   color: var(--color-light); */
+}
+
+
+/* days */
+.days {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 15px;
+   padding: 20px 15px;
+   justify-content: center;
+}
+@media (max-width: 1025px) {
+   .days {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width: 700px) {
+   .days {
+      grid-template-columns: 1fr;
+   }
+}
+
+
+/* day */
+.day {
+   --horizontal-padding: 10px;
+   --border: 1px solid var(--color-yellow);
+
+   border: var(--border);
+   border-radius: 5px;
+   overflow: hidden;
+}
+
+.day__date {
+   font-family: 'Roboto', sans-serif;
+   padding: 15px var(--horizontal-padding);
+   font-size: 20px;
+   font-weight: bold;
+   color: var(--color-green);
+   background-color: var(--color-yellow);
+}
+
+.lesson {
+   display: flex;
+   padding: 5px var(--horizontal-padding) 5px 0;
+   color: var(--color-light);  
+   line-height: 1.5em;
+   border-top: var(--border);
+   background-color: var(--color-green);
+}
+
+.lesson__number {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 35px;
+}
+
+.lesson__right-part {
+   flex-grow: 1;
+}
+
+.lesson__name {
+   font-family: 'Roboto', sans-serif;
+
+   max-width: 250px; 
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+.lesson__bottom-part {
+   display: flex;
+   justify-content: space-between;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Курс 2 . сем 1</title>
+   <link rel="stylesheet" href="reset.css">
+   <link rel="stylesheet" href="style.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="check-order">
+      <p class="check-order__text">Відобразити</p>
+      <input type="radio" class="check-order__input" id="checkbox-next" name="order" checked>
+      <label id="next" for="checkbox-next" class="check-order__toggler check-order__toggler--active">
+         Подальші
+      </label>
+
+      <input type="radio" class="check-order__input" id="checkbox-previous" name="order">
+      <label for="checkbox-previous" class="check-order__toggler" id="previous">
+         Попередні
+      </label>
+   </div>
+
+   <article class="days" id="days">
+   </article>
+
+   <script src="main.js" type="module"></script>
+</body>
+</html>
