@@ -63,6 +63,7 @@ body {
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 15px;
    padding: 20px 15px;
+   margin-bottom: 50px;
    justify-content: center;
 }
 @media (max-width: 1025px) {
