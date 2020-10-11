@@ -15,6 +15,7 @@ body {
 
    font-family: 'Open Sans', sans-serif;
    background-color: var(--color-brown);
+   min-height: 100vh;
 }
 
 
@@ -127,4 +128,29 @@ body {
 .lesson__bottom-part {
    display: flex;
    justify-content: space-between;
+}
+
+.search {
+   padding: 10px 15px;
+   position: fixed;
+   bottom: 0;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   width: 100%;
+   background-color: var(--color-brown);
+   -webkit-box-shadow: 0 -2px 12px #352b0e;
+           box-shadow: 0 -2px 12px #352b0e;
+}
+
+.search__input {
+   height: 40px;
+   font-size: 25px;
+   -webkit-box-flex: 1;
+       -ms-flex-positive: 1;
+           flex-grow: 1;
+   font-family: 'Open Sans', sans-serif;
 }
